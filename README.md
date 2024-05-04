@@ -4,7 +4,19 @@ These are my solutions for the [advent of code](https://adventofcode.com/) using
 
 I'm not a data scientist and all algorithms are my own or from standard libraries. Sometimes I use brute force rather than the most efficient algorithm. Most algorithms complete very fast. Those that do not are marked. *slow* algorithms take more than ten seconds to complete. *very slow* algorithms take several minutes or even hours to complete.
 
+## 2016
+
+To run a solution: `cd 2016 && cargo build && ./target/debug/advent_of_code <puzzle-num>`
+
+"puzzle-num" equals the text in the table below, e.g. "2016/01/1" for Solution #1 on day one.
+
+| Day  | Solution #1                    | Solution #2                    |
+|------|--------------------------------|--------------------------------|
+| #01  | [2016/01/1](2016/2016-01-1.rs) | [2016/01/2](2016/2016-01-2.rs) |
+
 ## 2015
+
+To run a solution: `cd 2015 && julia <filename>`
 
 | Day  | Solution #1                                | Solution #2                                |
 |------|--------------------------------------------|--------------------------------------------|
