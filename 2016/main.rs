@@ -4,6 +4,10 @@ use std::env;
 mod s_2016_01_1;
 #[path = "2016-01-2.rs"]
 mod s_2016_01_2;
+#[path = "2016-02-1.rs"]
+mod s_2016_02_1;
+#[path = "2016-02-2.rs"]
+mod s_2016_02_2;
 
 fn main() {
     if let Some(solution) = env::args().nth(1) {
@@ -11,6 +15,8 @@ fn main() {
         match solution.to_string().as_str() {
             "2016/01/1" => s_2016_01_1::solve(),
             "2016/01/2" => s_2016_01_2::solve(),
+            "2016/02/1" => s_2016_02_1::solve(),
+            "2016/02/2" => s_2016_02_2::solve(),
             _other => println!("solution not found: {}", solution),
         };
     } else {
