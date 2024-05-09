@@ -8,5 +8,6 @@ name = "advent_of_code"
 path = "main.rs"
 
 [dependencies]
-regex = "1.10.4"
 log = "0.4.21"
+md-5 = "0.10.6"
+regex = "1.10.4"
