@@ -1,3 +1,5 @@
+extern crate core;
+
 use std::env;
 
 #[path = "2016-01-1.rs"]
@@ -40,6 +42,10 @@ mod s_2016_09_2;
 mod s_2016_10_1;
 #[path = "2016-10-2.rs"]
 mod s_2016_10_2;
+#[path = "2016-11-1.rs"]
+mod s_2016_11_1;
+#[path = "2016-11-2.rs"]
+mod s_2016_11_2;
 
 
 fn main() {
@@ -66,6 +72,8 @@ fn main() {
             "2016/09/2" => s_2016_09_2::solve(),
             "2016/10/1" => s_2016_10_1::solve(),
             "2016/10/2" => s_2016_10_2::solve(),
+            "2016/11/1" => s_2016_11_1::solve(),
+            "2016/11/2" => s_2016_11_2::solve(),
             _other => println!("solution not found: {}", solution),
         };
     } else {
