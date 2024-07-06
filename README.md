@@ -1,8 +1,10 @@
 # advent-of-code
 
-These are my solutions for the [advent of code](https://adventofcode.com/) using [Julia](https://julialang.org/).
+These are my solutions for the [advent of code](https://adventofcode.com/) using a different programming language each year.
+- for [2016](#2016) I have used [Rust](https://www.rust-lang.org/)
+- for [2015](#2015) I have used [Julia](https://julialang.org/)
 
-I'm not a data scientist and all algorithms are my own or from standard libraries. Sometimes I use brute force rather than the most efficient algorithm. Most algorithms complete very fast. Those that do not are marked. *slow* algorithms take more than ten seconds to complete. *very slow* algorithms take several minutes or even hours to complete.
+Most algorithms complete very fast. Those that do not are marked. *slow* algorithms take more than ten seconds to complete. *very slow* algorithms take several minutes to complete.
 
 ## 2016
 
@@ -30,6 +32,7 @@ To run a solution: `cd 2016 && cargo build && ./target/debug/advent_of_code <puz
 | #16 | [2016/16/1](2016/2016-16-1.rs)        | [2016/16/2](2016/2016-16-2.rs)             |
 | #17 | [2016/17/1](2016/2016-17-1.rs)        | [2016/17/2](2016/2016-17-2.rs)             |
 | #18 | [2016/18/1](2016/2016-18-1.rs)        | [2016/18/2](2016/2016-18-2.rs)             |
+| #19 | [2016/19/1](2016/2016-19-1.rs)        | [2016/19/2](2016/2016-19-2.rs) (very slow) |
 
 ## 2015
 
