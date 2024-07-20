@@ -1,10 +1,19 @@
 # advent-of-code
 
 These are my solutions for the [advent of code](https://adventofcode.com/) using a different programming language each year.
+- for [2017](#2017) I have used [Haskell](https://www.haskell.org/)
 - for [2016](#2016) I have used [Rust](https://www.rust-lang.org/)
 - for [2015](#2015) I have used [Julia](https://julialang.org/)
 
 Most algorithms complete very fast. Those that do not are marked. *slow* algorithms take more than ten seconds to complete. *very slow* algorithms take several minutes to complete.
+
+## 2017
+
+To run a solution: `cd 2017 && runhaskell <filename>`
+
+| Day | Solution #1                    | Solution #2                    |
+|-----|--------------------------------|--------------------------------|
+| #01 | [2017/01/1](2017/2017-01-1.hs) | [2017/01/2](2017/2017-01-2.hs) |
 
 ## 2016
 
