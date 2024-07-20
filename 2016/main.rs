@@ -98,6 +98,10 @@ mod s_2016_23_2;
 mod s_2016_24_1;
 #[path = "2016-24-2.rs"]
 mod s_2016_24_2;
+#[path = "2016-25-1.rs"]
+mod s_2016_25_1;
+#[path = "2016-25-2.rs"]
+mod s_2016_25_2;
 
 fn main() {
     if let Some(solution) = env::args().nth(1) {
@@ -151,6 +155,8 @@ fn main() {
             "2016/23/2" => s_2016_23_2::solve(),
             "2016/24/1" => s_2016_24_1::solve(),
             "2016/24/2" => s_2016_24_2::solve(),
+            "2016/25/1" => s_2016_25_1::solve(),
+            "2016/25/2" => s_2016_25_2::solve(),
             _other => println!("solution not found: {}", solution),
         };
     } else {
