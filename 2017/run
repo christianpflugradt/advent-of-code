@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+  echo "Usage: $0 <Haskell file>"
+  exit 1
+fi
+
+FILE="$1"
+BASENAME=$(basename "$FILE" .hs)
+
+ghc -O2 "$FILE" -o "$BASENAME" >/dev/null 2>&1
+if [ $? -ne 0 ]; then
+  echo "Compilation failed!"
+  exit 1
+fi
+
+./"$BASENAME"
+
+rm -f "$BASENAME" "$BASENAME.hi" "$BASENAME.o" AocCommon.hi AocCommon.o
