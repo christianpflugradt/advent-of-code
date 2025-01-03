@@ -1,4 +1,4 @@
-module AocCommon (dec, findLargestWithIndex, hasDuplicates, inc, splitByChar, splitLines) where
+module AocCommon (count, dec, findLargestWithIndex, hasDuplicates, inc, splitByChar, splitLines) where
 
 import qualified Data.Set as Set
 import qualified Data.Vector as V
@@ -33,6 +33,9 @@ hasDuplicates = checkForDuplicates Set.empty
         checkForDuplicates set (x:xs)
             | x `Set.member` set = True
             | otherwise = checkForDuplicates (Set.insert x set) xs
+
+count :: Eq a => a -> [a] -> Int
+count  x = length . filter (== x)
 
 -- vectors
 
