@@ -1,6 +1,6 @@
 import Data.Maybe (fromJust, isJust)
 import qualified Data.Vector as V
-import AocCommon (dec, findLargestWithIndex, inc, splitByChar)
+import AocCommon (dec, findLargestWithIndex, inc, splitByChar, toInt)
 
 redistributionCycles :: V.Vector Int -> Int
 redistributionCycles banks = processCycle banks [] 0
@@ -30,7 +30,7 @@ redistribute blocks pos banks
         posNext = (inc pos) `mod` V.length banks
 
 solve :: String -> Int
-solve = redistributionCycles . V.fromList . map (read :: String -> Int) . splitByChar '\t'
+solve = redistributionCycles . V.fromList . map toInt . splitByChar '\t'
 
 main :: IO ()
 main = print . solve =<< readFile "2017-06.txt"

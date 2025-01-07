@@ -1,5 +1,5 @@
 import qualified Data.Vector as V
-import AocCommon (inc, splitLines)
+import AocCommon (inc, splitLines, toInt)
 
 calcStepsToOutOfBounds :: Int -> Int -> V.Vector Int -> Int
 calcStepsToOutOfBounds pos steps instructions
@@ -16,7 +16,7 @@ updateOffset offset
     | otherwise = inc offset
 
 solve :: String -> Int
-solve content = calcStepsToOutOfBounds 0 0 (V.fromList $ map read $ splitLines content)
+solve content = calcStepsToOutOfBounds 0 0 (V.fromList $ map toInt $ splitLines content)
 
 main :: IO ()
 main = print . solve =<< readFile "2017-05.txt"

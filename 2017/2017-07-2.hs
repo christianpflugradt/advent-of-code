@@ -2,7 +2,7 @@ import Data.Char (isAlpha, isDigit)
 import Data.List (find)
 import Data.Maybe (fromJust)
 import qualified Data.Set as S
-import AocCommon (count, splitLines)
+import AocCommon (count, splitLines, toInt)
 
 data Program = Program {
     name :: String,
@@ -10,9 +10,9 @@ data Program = Program {
     weight :: Int
 } deriving (Show)
 
-splitWords :: String -> [String]
-splitWords "" = [""]
-splitWords str = foldr splitStep [""] str
+splitAlphanumerics :: String -> [String]
+splitAlphanumerics "" = [""]
+splitAlphanumerics str = foldr splitStep [""] str
     where
         splitStep char acc@(x:xs)
             | isAlpha char || isDigit char = (char : x) : xs
@@ -33,7 +33,7 @@ totalWeight = \p -> weight p + sum (map totalWeight (subPrograms p))
 programTree :: String -> [[String]] -> Program
 programTree root programs = Program {
             name = head programData,
-            weight = read (programData !! 1) :: Int,
+            weight = toInt (programData !! 1),
             subPrograms = map (\x -> programTree x programs) (drop 2 programData)
         }
     where
@@ -63,7 +63,7 @@ solve content = case findUnbalanced tree of
         Just res -> res
         Nothing -> error "no unbalanced node found"
     where
-        programs = map splitWords $ splitLines content
+        programs = map splitAlphanumerics $ splitLines content
         tree = programTree (findRoot programs) programs
 
 main :: IO ()

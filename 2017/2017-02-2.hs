@@ -1,8 +1,8 @@
 import System.IO (readFile)
-import AocCommon (splitByChar, splitLines)
+import AocCommon (splitByChar, splitLines, toInt)
 
 mapNumbers :: String -> [[Int]]
-mapNumbers = map (map read . splitByChar '\t') . splitLines
+mapNumbers = map (map toInt . splitByChar '\t') . splitLines
 
 divisiblePairs :: [Int] -> [(Int, Int)]
 divisiblePairs xs = [(a, b) | a <- xs, b <- xs, a/=b, a `mod` b == 0]

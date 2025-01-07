@@ -1,5 +1,5 @@
 import qualified Data.Vector as V
-import AocCommon (inc, splitLines)
+import AocCommon (inc, splitLines, toInt)
 
 data InstructionContext = InstructionContext {
     pos :: Int,
@@ -24,7 +24,7 @@ solve :: String -> Int
 solve content = steps $ process InstructionContext {
     pos = 0,
     steps = 0,
-    instructions = V.fromList $ map read $ splitLines content
+    instructions = V.fromList $ map toInt $ splitLines content
 }
 
 main :: IO ()

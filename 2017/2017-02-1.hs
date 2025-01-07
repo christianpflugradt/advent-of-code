@@ -1,8 +1,8 @@
 import System.IO (readFile)
-import AocCommon (splitByChar, splitLines)
+import AocCommon (splitByChar, splitLines, toInt)
 
 mapNumbers :: String -> [[Int]]
-mapNumbers = map (map read . splitByChar '\t') . splitLines
+mapNumbers = map (map toInt . splitByChar '\t') . splitLines
 
 maxMinDiff :: [Int] -> Int
 maxMinDiff xs = maximum xs - minimum xs
