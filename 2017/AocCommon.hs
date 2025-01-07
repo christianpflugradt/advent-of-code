@@ -1,4 +1,19 @@
-module AocCommon (count, dec, findLargestWithIndex, hasDuplicates, inc, splitByChar, splitLines) where
+module AocCommon (
+    -- numbers
+    inc,
+    dec,
+    -- split
+    splitByChar,
+    splitLines,
+    splitWords,
+    -- conversions
+    toInt,
+    -- lists
+    hasDuplicates,
+    count,
+    -- vectors
+    findLargestWithIndex
+) where
 
 import qualified Data.Set as Set
 import qualified Data.Vector as V
@@ -11,7 +26,7 @@ inc = (+1)
 dec :: Int -> Int
 dec = subtract 1
 
--- split file content
+-- split
 
 splitLines :: String -> [String]
 splitLines str = splitByChar '\n' str
@@ -23,6 +38,14 @@ splitByChar sep str = foldr splitStep [""] str
         splitStep char acc@(x:xs)
             | char == sep = "" : acc
             | otherwise = (char : x) : xs
+
+splitWords :: String -> [String]
+splitWords = splitByChar ' '
+
+-- conversions
+
+toInt :: String -> Int
+toInt = read
 
 -- lists
 

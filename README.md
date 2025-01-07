@@ -9,19 +9,23 @@ Most algorithms complete very fast. Those that do not are marked. *slow* algorit
 
 ## 2017
 
-Some solutions require the `vector` library. To install it run `cabal install --lib vector`.
+Some solutions use additional libraries. Install them as needed:
+- `cabal install --lib vector`
+
+Haskell’s standard library is minimal by design, excluding constructs considered standard in other languages. Sticking solely to the standard library can lead to severe performance issues or require implementing complex structures far beyond the scope of these puzzles. Thus, I have deliberately opted to use extra libraries where appropriate.
 
 To run a solution: `cd 2017 && sh run <filename>`
 
-| Day | Solution #1                    | Solution #2                           |
-|-----|--------------------------------|---------------------------------------|
-| #01 | [2017/01/1](2017/2017-01-1.hs) | [2017/01/2](2017/2017-01-2.hs)        |
-| #02 | [2017/02/1](2017/2017-02-1.hs) | [2017/02/2](2017/2017-02-2.hs)        |
-| #03 | [2017/03/1](2017/2017-03-1.hs) | [2017/03/2](2017/2017-03-2.hs)        |
-| #04 | [2017/04/1](2017/2017-04-1.hs) | [2017/04/2](2017/2017-04-2.hs)        |
-| #05 | [2017/05/1](2017/2017-05-1.hs) | [2017/05/2](2017/2017-05-2.hs) (slow) |
-| #06 | [2017/06/1](2017/2017-06-1.hs) | [2017/06/2](2017/2017-06-2.hs)        |
-| #07 | [2017/07/1](2017/2017-07-1.hs) | (coming soon)                         |
+| Day | Solution #1                    | Solution #2                           | Extra libs used |
+|-----|--------------------------------|---------------------------------------|-----------------|
+| #01 | [2017/01/1](2017/2017-01-1.hs) | [2017/01/2](2017/2017-01-2.hs)        |                 |
+| #02 | [2017/02/1](2017/2017-02-1.hs) | [2017/02/2](2017/2017-02-2.hs)        |                 |
+| #03 | [2017/03/1](2017/2017-03-1.hs) | [2017/03/2](2017/2017-03-2.hs)        |                 |
+| #04 | [2017/04/1](2017/2017-04-1.hs) | [2017/04/2](2017/2017-04-2.hs)        |                 |
+| #05 | [2017/05/1](2017/2017-05-1.hs) | [2017/05/2](2017/2017-05-2.hs) (slow) | `Data.Vector`   |
+| #06 | [2017/06/1](2017/2017-06-1.hs) | [2017/06/2](2017/2017-06-2.hs)        | `Data.Vector`   |
+| #07 | [2017/07/1](2017/2017-07-1.hs) | [2017/07/2](2017/2017-07-2.hs)        |                 |
+| #08 | [2017/08/1](2017/2017-08-1.hs) | [2017/08/2](2017/2017-08-2.hs)        |                 |
 
 ## 2016
 
