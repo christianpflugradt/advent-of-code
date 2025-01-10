@@ -2,6 +2,8 @@ module AocCommon (
     -- numbers
     inc,
     dec,
+    -- strings
+    trimTrailing,
     -- split
     splitByChar,
     splitLines,
@@ -25,6 +27,11 @@ inc = (+1)
 
 dec :: Int -> Int
 dec = subtract 1
+
+-- string
+
+trimTrailing :: Char -> String -> String
+trimTrailing c s = if not (null s) && last s == ',' then init s else s
 
 -- split
 
