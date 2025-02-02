@@ -1,4 +1,4 @@
-name: AoC 2015 Solutions Check
+name: 2015 in Julia
 
 on:
   push:
@@ -29,7 +29,7 @@ jobs:
               file="2015-${day}-${part}.jl"
               if [[ -f "$file" ]]; then
                 echo "Running $file..."
-                julia "$file"
+                julia "$file" 2>/dev/null
               else
                 echo "Skipping missing file: $file"
               fi
@@ -44,7 +44,7 @@ jobs:
           seconds=$((total_time % 60))
           formatted_time=$(printf "%d:%02d" "$minutes" "$seconds")
           echo "execution_time=$formatted_time" >> $GITHUB_ENV
-          echo "{\"label\": \"Execution Time\", \"status\": \"$formatted_time\", \"color\": \"blue\"}" > execution_time_2015.json
+          echo "{\"schemaVersion\": 1, \"label\": \"Execution Time\", \"message\": \"$formatted_time\", \"color\": \"blue\"}" > execution_time_2015.json
 
       - name: Commit Execution Time Badge to GitHub Pages
         run: |
@@ -54,4 +54,4 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add badges/execution_time_2015.json
           git commit -m "Update execution time badge for 2015 [skip ci]" || echo "No changes to commit"
-          git push
+          git pull --no-rebase --strategy=ours origin main && git push

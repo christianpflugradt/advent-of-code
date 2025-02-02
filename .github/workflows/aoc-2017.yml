@@ -1,4 +1,4 @@
-name: AoC 2017 Solutions Check
+name: 2017 in Haskell
 
 on:
   push:
@@ -57,7 +57,7 @@ jobs:
           seconds=$((total_time % 60))
           formatted_time=$(printf "%d:%02d" "$minutes" "$seconds")
           echo "execution_time=$formatted_time" >> $GITHUB_ENV
-          echo "{\"label\": \"Execution Time\", \"status\": \"$formatted_time\", \"color\": \"blue\"}" > execution_time_2017.json
+          echo "{\"schemaVersion\": 1, \"label\": \"Execution Time\", \"message\": \"$formatted_time\", \"color\": \"blue\"}" > execution_time_2017.json
 
       - name: Commit Execution Time Badge to GitHub Pages
         run: |
@@ -67,4 +67,4 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add badges/execution_time_2017.json
           git commit -m "Update execution time badge for 2017 [skip ci]" || echo "No changes to commit"
-          git pull --rebase origin main && git push
+          git pull --no-rebase --strategy=ours origin main && git push
