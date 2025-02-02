@@ -9,7 +9,7 @@ Most algorithms complete very fast. Those that do not are marked. *slow* algorit
 
 ## 2017
 
-![Solutions Check](https://github.com/christianpflugradt/advent-of-code/actions/workflows/aoc-2017.yml/badge.svg?branch=main) ![Solutions Execution Time](https://christianpflugradt.github.io/advent-of-code/badges/execution_time_2017.json)
+![Solutions Check](https://github.com/christianpflugradt/advent-of-code/actions/workflows/aoc-2017.yml/badge.svg?branch=main) ![Solutions Execution Time](https://img.shields.io/endpoint?url=https://christianpflugradt.github.io/advent-of-code/badges/execution_time_2017.json)
 
 For my third year of Advent of Code, I chose [Haskell](https://www.haskell.org/), the undisputed king of functional programming. Haskell is as challenging as it is beautiful, with its strict purity and laziness pushing me to approach problems in fundamentally different ways. Unlike imperative languages, where one can fall back on mutable state and loops, Haskell demands a deep understanding of recursion, higher-order functions, and immutability, making it both a mental workout and a rewarding experience.
 
@@ -46,7 +46,7 @@ To run a solution: `cd 2017 && sh run <filename>`
 
 ## 2016
 
-![Solutions Check](https://github.com/christianpflugradt/advent-of-code/actions/workflows/aoc-2016.yml/badge.svg?branch=main) ![Solutions Execution Time](https://christianpflugradt.github.io/advent-of-code/badges/execution_time_2016.json)
+![Solutions Check](https://github.com/christianpflugradt/advent-of-code/actions/workflows/aoc-2016.yml/badge.svg?branch=main) ![Solutions Execution Time](https://img.shields.io/endpoint?url=https://christianpflugradt.github.io/advent-of-code/badges/execution_time_2016.json)
 
 For my second year of Advent of Code 2016, I chose [Rust](https://www.rust-lang.org/), a language that offers a unique blend of performance, safety, and modern functional programming features. One of the most striking aspects of Rust is its ownership model, which enforces memory safety at compile time without needing a garbage collector. This paradigm was a fascinating experience and challenged me to think more deeply about resource management, a skill that translates well to systems programming and beyond.
 
@@ -86,7 +86,7 @@ To run a solution: `cd 2016 && cargo build && ./target/debug/advent_of_code <puz
 
 ## 2015
 
-![Solutions Check](https://github.com/christianpflugradt/advent-of-code/actions/workflows/aoc-2015.yml/badge.svg?branch=main) ![Solutions Execution Time](https://christianpflugradt.github.io/advent-of-code/badges/execution_time_2015.json)
+![Solutions Check](https://github.com/christianpflugradt/advent-of-code/actions/workflows/aoc-2015.yml/badge.svg?branch=main) ![Solutions Execution Time](https://img.shields.io/endpoint?url=https://christianpflugradt.github.io/advent-of-code/badges/execution_time_2015.json)
 
 For my first year of Advent of Code, I chose [Julia](https://julialang.org/), a language that strikes a balance between expressiveness and performance, making it an excellent choice for quickly prototyping and iterating on solutions. Julia’s dynamic and imperative nature allows for an easy start, especially in the context of coding challenges where flexibility is key. The readable, non-verbose syntax - reminiscent of Python, a language I am well acquainted with - made it a comfortable transition.
 
