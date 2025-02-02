@@ -82,6 +82,8 @@ To run a solution: `cd 2016 && cargo build && ./target/debug/advent_of_code <puz
 
 ## 2015
 
+![AoC 2015 Solutions Check](https://github.com/christianpflugradt/advent-of-code/actions/workflows/aoc-2015.yml/badge.svg?branch=main) ![AoC 2015 Execution Time](https://christianpflugradt.github.io/advent-of-code/badges/execution_time_2015.json)
+
 For my first year of Advent of Code, I chose [Julia](https://julialang.org/), a language that strikes a balance between expressiveness and performance, making it an excellent choice for quickly prototyping and iterating on solutions. Julia’s dynamic and imperative nature allows for an easy start, especially in the context of coding challenges where flexibility is key. The readable, non-verbose syntax - reminiscent of Python, a language I am well acquainted with - made it a comfortable transition.
 
 One of Julia’s standout features is its powerful support for matrices, which proved useful when handling two-dimensional data structures commonly found in AoC problems. The 1-based indexing reduces the risk of off-by-one errors, a frequent pitfall in 0-based languages. Additionally, Julia’s native regular expression support facilitated quick and efficient text processing, which is often required for parsing input data. While Julia is primarily designed for high-performance numerical computing, it proved to be a surprisingly effective and ergonomic choice for the kind of algorithmic problem-solving that AoC entails.

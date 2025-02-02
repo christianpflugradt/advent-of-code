@@ -1,0 +1,57 @@
+name: AoC 2015 Solutions Check
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check:
+    name: Run Julia AoC 2015 Solutions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Julia
+        uses: julia-actions/setup-julia@v1
+        with:
+          version: '1.9'
+
+      - name: Start Timer
+        run: echo "start_time=$(date +%s)" >> $GITHUB_ENV
+
+      - name: Run AoC 2015 Solutions in Order
+        run: |
+          cd 2015
+          for day in {01..25}; do
+            for part in 1 2; do
+              file="2015-${day}-${part}.jl"
+              if [[ -f "$file" ]]; then
+                echo "Running $file..."
+                julia "$file"
+              else
+                echo "Skipping missing file: $file"
+              fi
+            done
+          done
+
+      - name: End Timer & Format Execution Time
+        run: |
+          end_time=$(date +%s)
+          total_time=$((end_time - start_time))
+          minutes=$((total_time / 60))
+          seconds=$((total_time % 60))
+          formatted_time=$(printf "%d:%02d" "$minutes" "$seconds")
+          echo "execution_time=$formatted_time" >> $GITHUB_ENV
+          echo "{\"label\": \"Execution Time\", \"status\": \"$formatted_time\", \"color\": \"blue\"}" > execution_time_2015.json
+
+      - name: Commit Execution Time Badge to GitHub Pages
+        run: |
+          mkdir -p badges
+          mv execution_time_2015.json badges/
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add badges/execution_time_2015.json
+          git commit -m "Update execution time badge for 2015 [skip ci]" || echo "No changes to commit"
+          git push
