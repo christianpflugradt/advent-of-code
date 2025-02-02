@@ -1,4 +1,4 @@
-# advent-of-code
+# My Advent of Code Solutions
 
 These are my solutions for the [advent of code](https://adventofcode.com/) using a different programming language each year.
 - for [2017](#2017) I have used [Haskell](https://www.haskell.org/)
