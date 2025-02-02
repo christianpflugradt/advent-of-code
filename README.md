@@ -9,6 +9,8 @@ Most algorithms complete very fast. Those that do not are marked. *slow* algorit
 
 ## 2017
 
+![Solutions Check](https://github.com/christianpflugradt/advent-of-code/actions/workflows/aoc-2017.yml/badge.svg?branch=main) ![Solutions Execution Time](https://christianpflugradt.github.io/advent-of-code/badges/execution_time_2017.json)
+
 For my third year of Advent of Code, I chose [Haskell](https://www.haskell.org/), the undisputed king of functional programming. Haskell is as challenging as it is beautiful, with its strict purity and laziness pushing me to approach problems in fundamentally different ways. Unlike imperative languages, where one can fall back on mutable state and loops, Haskell demands a deep understanding of recursion, higher-order functions, and immutability, making it both a mental workout and a rewarding experience.
 
 One of the biggest takeaways from using Haskell for AoC was the need to carefully consider data structures. The choice between lists, vectors, and sequences was not just a matter of performance but also about leveraging the right abstractions for the problem at hand. Haskell’s lazy evaluation allowed for elegant, declarative solutions, but also introduced challenges in reasoning about efficiency. Perhaps most strikingly, Haskell opened completely new perspectives on recursion, showing me how to express solutions in a way that feels natural in a functional paradigm. Of all the languages I’ve used for AoC so far, Haskell has been the most pleasant to write in - its expressiveness and mathematical elegance make every solution feel like a carefully crafted piece of art.
