@@ -27,7 +27,9 @@ jobs:
       - name: Install Required Libraries (vector)
         run: |
           cabal update
-          cabal install vector
+          cabal install --lib vector
+          ghc-pkg recache
+          echo "export GHC_PACKAGE_PATH=$(ghc --print-libdir)/package.conf.d" >> $GITHUB_ENV
 
       - name: Start Timer
         run: echo "start_time=$(date +%s)" >> $GITHUB_ENV

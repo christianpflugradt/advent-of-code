@@ -8,7 +8,7 @@ fi
 FILE="$1"
 BASENAME=$(basename "$FILE" .hs)
 
-ghc -O2 "$FILE" -o "$BASENAME" >/dev/null 2>&1
+ghc -O2 -package base -package containers -package vector "$FILE" -o "$BASENAME" >/dev/null 2>&1
 if [ $? -ne 0 ]; then
   echo "Compilation failed!"
   exit 1
