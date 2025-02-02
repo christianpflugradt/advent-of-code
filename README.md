@@ -9,10 +9,14 @@ Most algorithms complete very fast. Those that do not are marked. *slow* algorit
 
 ## 2017
 
-Some solutions use additional libraries. Install them as needed:
+For my third year of Advent of Code, I chose [Haskell](https://www.haskell.org/), the undisputed king of functional programming. Haskell is as challenging as it is beautiful, with its strict purity and laziness pushing me to approach problems in fundamentally different ways. Unlike imperative languages, where one can fall back on mutable state and loops, Haskell demands a deep understanding of recursion, higher-order functions, and immutability, making it both a mental workout and a rewarding experience.
+
+One of the biggest takeaways from using Haskell for AoC was the need to carefully consider data structures. The choice between lists, vectors, and sequences was not just a matter of performance but also about leveraging the right abstractions for the problem at hand. Haskell’s lazy evaluation allowed for elegant, declarative solutions, but also introduced challenges in reasoning about efficiency. Perhaps most strikingly, Haskell opened completely new perspectives on recursion, showing me how to express solutions in a way that feels natural in a functional paradigm. Of all the languages I’ve used for AoC so far, Haskell has been the most pleasant to write in - its expressiveness and mathematical elegance make every solution feel like a carefully crafted piece of art.
+
+Some solutions use the vector library. Install it as needed:
 - `cabal install --lib vector`
 
-Haskell’s standard library is minimal by design, excluding constructs considered standard in other languages. Sticking solely to the standard library can lead to severe performance issues or require implementing complex structures far beyond the scope of these puzzles. Thus, I have deliberately opted to use extra libraries where appropriate.
+Haskell’s standard library is minimal by design, excluding constructs considered standard in other languages. Sticking solely to the standard library can lead to severe performance issues or require implementing complex structures far beyond the scope of these puzzles. Thus, I have deliberately opted to use this extra library where appropriate.
 
 To run a solution: `cd 2017 && sh run <filename>`
 
@@ -36,8 +40,13 @@ To run a solution: `cd 2017 && sh run <filename>`
 | #16 | [2017/16/1](2017/2017-16-1.hs) | [2017/16/2](2017/2017-16-2.hs)             |                 |
 | #17 | [2017/17/1](2017/2017-17-1.hs) | [2017/17/2](2017/2017-17-2.hs) (very slow) |                 |
 | #18 | [2017/18/1](2017/2017-18-1.hs) | [2017/18/2](2017/2017-18-2.hs)             |                 |
+| #19 | [2017/19/1](2017/2017-19-1.hs) | [2017/19/2](2017/2017-19-2.hs)             |                 |
 
 ## 2016
+
+For my second year of Advent of Code 2016, I chose [Rust](https://www.rust-lang.org/), a language that offers a unique blend of performance, safety, and modern functional programming features. One of the most striking aspects of Rust is its ownership model, which enforces memory safety at compile time without needing a garbage collector. This paradigm was a fascinating experience and challenged me to think more deeply about resource management, a skill that translates well to systems programming and beyond.
+
+Rust’s immutable-first approach naturally encourages safe and predictable code, reducing unintended side effects. The absence of null eliminates an entire class of runtime errors, making solutions more robust. Additionally, Rust provides many modern functional programming concepts, such as pattern matching, iterators, and algebraic data types, which align well with the kind of problem-solving AoC requires. At the same time, its structs and traits offered a great experience for someone like me with a strong object-oriented programming background, allowing for well-structured and modular code. While Rust has a reputation for being complex, I found it deeply rewarding, as it forced me to write precise and efficient solutions while learning valuable concepts along the way.
 
 To run a solution: `cd 2016 && cargo build && ./target/debug/advent_of_code <puzzle-num>`
 
@@ -72,6 +81,10 @@ To run a solution: `cd 2016 && cargo build && ./target/debug/advent_of_code <puz
 | #25 | [2016/25/1](2016/2016-25-1.rs)        | [2016/25/2](2016/2016-25-2.rs)             |
 
 ## 2015
+
+For my first year of Advent of Code, I chose [Julia](https://julialang.org/), a language that strikes a balance between expressiveness and performance, making it an excellent choice for quickly prototyping and iterating on solutions. Julia’s dynamic and imperative nature allows for an easy start, especially in the context of coding challenges where flexibility is key. The readable, non-verbose syntax - reminiscent of Python, a language I am well acquainted with - made it a comfortable transition.
+
+One of Julia’s standout features is its powerful support for matrices, which proved useful when handling two-dimensional data structures commonly found in AoC problems. The 1-based indexing reduces the risk of off-by-one errors, a frequent pitfall in 0-based languages. Additionally, Julia’s native regular expression support facilitated quick and efficient text processing, which is often required for parsing input data. While Julia is primarily designed for high-performance numerical computing, it proved to be a surprisingly effective and ergonomic choice for the kind of algorithmic problem-solving that AoC entails.
 
 To run a solution: `cd 2015 && julia <filename>`
 
