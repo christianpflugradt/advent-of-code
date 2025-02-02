@@ -24,7 +24,6 @@ impl Instruction for Rectangle {
                 coordinates.insert((x, y), true);
             }
         }
-        print_coordinates(coordinates);
     }
 }
 
@@ -39,7 +38,6 @@ impl Instruction for RowRotation {
         for col in COLUMNS..(COLUMNS + self.pixels) {
             coordinates.remove(&(col, self.y));
         }
-        print_coordinates(coordinates);
     }
 }
 
@@ -54,7 +52,6 @@ impl Instruction for ColumnRotation {
         for row in ROWS..(ROWS + self.pixels) {
             coordinates.remove(&(self.x, row));
         }
-        print_coordinates(coordinates);
     }
 }
 

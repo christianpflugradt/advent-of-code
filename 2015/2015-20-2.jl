@@ -21,9 +21,6 @@ function solve(input)
                 presents += elv
             end
         end
-        if number % 10000 == 0
-            println(number, " ", presents)
-        end
     end
     return number
 end

@@ -13,9 +13,6 @@ function solve(input)
         if startswith(hash, "00000")
             return number
         end
-        if number % 10000 == 0
-            println("$number hashes evaluated...")
-        end
         number += 1
     end
 end

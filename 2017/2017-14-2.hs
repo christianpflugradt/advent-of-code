@@ -6,8 +6,6 @@ import Numeric (showIntAtBase)
 import Text.Printf (printf)
 import AocCommon (count, dec, inc, splitByChar, toInt)
 
-import Debug.Trace (trace)
-
 hash :: ([Int], [Int], Int, Int) -> ([Int], [Int], Int, Int)
 hash ([], rope, currentPos, skipSize) = ([], rope, currentPos, skipSize)
 hash ((len:lens), rope, currentPos, skipSize) = knotTie (len:lens) len lens rope currentPos skipSize
