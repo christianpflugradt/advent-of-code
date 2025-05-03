@@ -13,12 +13,9 @@ module AocCommon (
     -- lists
     hasDuplicates,
     count,
-    -- vectors
-    findLargestWithIndex
 ) where
 
 import qualified Data.Set as Set
-import qualified Data.Vector as V
 
 -- numbers
 
@@ -66,18 +63,3 @@ hasDuplicates = checkForDuplicates Set.empty
 
 count :: Eq a => a -> [a] -> Int
 count  x = length . filter (== x)
-
--- vectors
-
-findLargestWithIndex :: Ord a => V.Vector a -> Maybe (Int, a)
-findLargestWithIndex vector
-        | V.null vector = Nothing
-        | otherwise = Just $ findMax (0, V.head vector) 1
-    where
-        findMax (maxValIdx, maxVal) idx
-                | idx >= V.length vector = (maxValIdx, maxVal)
-                | otherwise = findMax (newMaxValIdx, newMaxVal) (inc idx)
-            where
-                currentVal = vector V.! idx
-                newMaxVal = max currentVal maxVal
-                newMaxValIdx = if currentVal > maxVal then idx else maxValIdx

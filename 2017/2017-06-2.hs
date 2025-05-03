@@ -1,6 +1,19 @@
 import Data.Maybe (fromJust, isJust)
 import qualified Data.Vector as V
-import AocCommon (dec, findLargestWithIndex, inc, splitByChar, toInt)
+import AocCommon (dec, inc, splitByChar, toInt)
+
+findLargestWithIndex :: Ord a => V.Vector a -> Maybe (Int, a)
+findLargestWithIndex vector
+        | V.null vector = Nothing
+        | otherwise = Just $ findMax (0, V.head vector) 1
+    where
+        findMax (maxValIdx, maxVal) idx
+                | idx >= V.length vector = (maxValIdx, maxVal)
+                | otherwise = findMax (newMaxValIdx, newMaxVal) (inc idx)
+            where
+                currentVal = vector V.! idx
+                newMaxVal = max currentVal maxVal
+                newMaxValIdx = if currentVal > maxVal then idx else maxValIdx
 
 redistributionCycles :: V.Vector Int -> Int
 redistributionCycles banks = processCycle banks [] 0
