@@ -1,13 +1,14 @@
 import Data.List (sort)
+import qualified Data.Set as S
 import AocCommon (splitByChar, splitLines)
 
 hasDuplicates :: Ord a => [a] -> Bool
-hasDuplicates = checkForDuplicates Set.empty
+hasDuplicates = checkForDuplicates S.empty
     where
         checkForDuplicates _ [] = False
         checkForDuplicates set (x:xs)
-            | x `Set.member` set = True
-            | otherwise = checkForDuplicates (Set.insert x set) xs
+            | x `S.member` set = True
+            | otherwise = checkForDuplicates (S.insert x set) xs
 
 solve :: String -> Int
 solve = length . filter not . map (hasDuplicates . map sort . splitByChar ' ') . splitLines
