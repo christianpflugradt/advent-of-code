@@ -10,6 +10,8 @@ Most algorithms complete very fast. Those that do not are marked. *slow* algorit
 
 ## 2018
 
+![Solutions Check](https://github.com/christianpflugradt/advent-of-code/actions/workflows/aoc-2018.yml/badge.svg?branch=main) ![Solutions Execution Time](https://img.shields.io/endpoint?url=https://christianpflugradt.github.io/advent-of-code/badges/execution_time_2018.json)
+
 For my fourth year of Advent of Code, I chose [Perl](https://www.perl.org) - more on that later.
 
 To run a solution: `cd 2018 && perl`
