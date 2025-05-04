@@ -1,11 +1,22 @@
 # My Advent of Code Solutions
 
 These are my solutions for the [advent of code](https://adventofcode.com/) using a different programming language each year.
+- for [2018](#2018) I am using [Perl](https://www.perl.org)
 - for [2017](#2017) I have used [Haskell](https://www.haskell.org/)
 - for [2016](#2016) I have used [Rust](https://www.rust-lang.org/)
 - for [2015](#2015) I have used [Julia](https://julialang.org/)
 
 Most algorithms complete very fast. Those that do not are marked. *slow* algorithms take more than ten seconds to complete. *very slow* algorithms take several minutes to complete.
+
+## 2018
+
+For my fourth year of Advent of Code, I chose [Perl](https://www.perl.org) - more on that later.
+
+To run a solution: `cd 2018 && perl`
+
+| Day | Solution #1                    | Solution #2                                |
+|-----|--------------------------------|--------------------------------------------|
+| #01 | [2018/01/1](2018/2018-01-1.pl) | [2018/01/2](2018/2018-01-2.pl)             |
 
 ## 2017
 
