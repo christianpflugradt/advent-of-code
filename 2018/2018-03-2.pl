@@ -1,5 +1,4 @@
 open FH, '2018-03.txt';
-
 while (<FH>) {
     /.+?(\d+).+?(\d+).+?(\d+).+?(\d+).+?(\d+)/;
     $z{$1}++;
@@ -10,5 +9,4 @@ while (<FH>) {
     }
 }
 delete $z{$_} for map @$_ > 1 ? @$_ : (), values %x;
-
 print +(keys %z)[0], "\n";
