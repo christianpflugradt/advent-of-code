@@ -1,5 +1,12 @@
 # My Advent of Code Solutions
 
+> [!NOTE]
+> **This project is archived.** Since early 2026 I hardly write any code by hand anymore, because
+> working with AI agents makes me far more productive. That takes away the point of solving puzzles by
+> hand for its own sake, and with it my motivation for this repository, so the series of years stays
+> unfinished. The solutions remain available for reference. If this changes, I might unarchive it.
+> Please don't confuse it with my active projects.
+
 These are my solutions for the [advent of code](https://adventofcode.com/) using a different programming language each year.
 - for [2018](#2018) I am using [Perl](https://www.perl.org)
 - for [2017](#2017) I have used [Haskell](https://www.haskell.org/)
